@@ -160,7 +160,7 @@ const VoiceAssistant: React.FC<VoiceAssistantProps> = ({ onNavigate, onRoomActio
       streamRef.current = stream;
 
       // 3. Connect to Gemini Live
-      aiRef.current = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      aiRef.current = new GoogleGenAI({ apiKey: (process.env.API_KEY as string) });
       
       // Prompt Engineering for better room recognition and speed
       const SYSTEM_INSTRUCTION = `

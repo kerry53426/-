@@ -3,7 +3,7 @@ import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { Member, MembershipTier, AIAnalysisResult, DailyStats } from "../types";
 
 // Initialize Gemini API
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: (process.env.API_KEY as string) });
 
 /**
  * Analyzes unstructured staff notes to extract structured preferences,
